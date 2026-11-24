@@ -550,6 +550,13 @@ dialog:has(.plush-viewer) .panel-icon { display: none; }
   border-color: #8a8d6c;
   background: radial-gradient(ellipse at 50% 48%, #49564a, #293a33 59%, #1b2629);
 }
+dialog:has(.display-case-viewer) { width: min(39rem, calc(100% - 1.5rem)); }
+dialog:has(.display-case-viewer) h2 { padding-inline-end: 2.1rem; }
+.display-case-stage {
+  border-color: #aa8c67a6;
+  height: clamp(14rem, 53dvh, 28rem);
+  background: radial-gradient(ellipse at 50% 46%, #55534a, #332f30 66%, #25262a);
+}
 [data-object-stage] canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: none; }
 [data-object-stage] canvas:active { cursor: grabbing; }
 [data-object-stage] canvas:focus-visible { outline: 1px solid #ebc991; outline-offset: -4px; }
