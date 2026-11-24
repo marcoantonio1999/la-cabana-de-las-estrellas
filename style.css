@@ -723,11 +723,22 @@ dialog:has(.sky-atlas) { width: min(63rem, calc(100% - 1.5rem)); }
   border: 0; border-radius: 50%; background: transparent;
 }
 .sky-target:focus-visible { outline: 2px solid #ffda92; }
+.sky-loupe {
+  position: absolute; right: 1.5%; bottom: 1.5%;
+  width: clamp(7.25rem, 34%, 13rem); aspect-ratio: 1; overflow: hidden;
+  border: 2px solid #e0be82; border-radius: 50%;
+  background: #102638; box-shadow: 0 0 0 3px #141f28, 0 5px 18px #060a12b0;
+  pointer-events: none;
+}
+.sky-loupe.at-left { right: auto; left: 1.5%; }
+.sky-loupe.at-top { bottom: auto; top: 1.5%; }
+.sky-loupe.pinned { pointer-events: auto; }
 .sky-readout { display: flex; gap: .6rem; justify-content: space-between; align-items: center; min-height: 2.3rem; }
 #panel-body .sky-readout p { margin: 0; min-width: 0; font-size: .95rem; }
 #panel-body #sky-star-position { margin-top: .16rem; color: #f4d499; font-size: .8rem; }
-#sky-traces { padding: .35rem .6rem; font-size: .8rem; }
-#sky-traces[aria-pressed="true"] { border-color: #d9bd83; color: #f6d89d; }
+.sky-map-actions { display: flex; flex-wrap: wrap; justify-content: end; gap: .35rem; }
+.sky-map-actions button { padding: .35rem .6rem; font-size: .8rem; }
+.sky-map-actions button[aria-pressed="true"] { border-color: #d9bd83; color: #f6d89d; }
 .sky-clock { display: grid; gap: .2rem; margin: .6rem 0 .25rem; }
 .sky-clock label { display: flex; justify-content: space-between; gap: .6rem; font-size: .88rem; }
 .sky-clock output { color: #f6d89d; font-variant-numeric: tabular-nums; }
