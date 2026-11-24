@@ -538,8 +538,6 @@ dialog:has(.stone-layout) { width: min(37rem, calc(100% - 1.5rem)); }
 }
 .stone-table th { color: #edd6a5; font-size: clamp(.64rem, 2.6vw, .81rem); font-weight: 650; }
 .stone-table th:first-child { width: 18%; }
-.stone-table thead th { height: 3.3rem; vertical-align: bottom; }
-.stone-table th span { display: block; }
 .stone-table td { padding: 0; }
 .stone-cell {
   display: grid; width: 100%; aspect-ratio: 1; place-items: center; padding: 0; touch-action: manipulation;
