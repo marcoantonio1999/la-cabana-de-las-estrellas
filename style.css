@@ -491,7 +491,19 @@ dialog:has(.ink-viewer) { width: min(57rem, calc(100% - 1.5rem)); background: li
 }
 .ink-glass canvas { display: block; width: 100%; height: auto; border-radius: .32rem; touch-action: none; cursor: grab; }
 .ink-glass canvas:active { cursor: grabbing; }
-.ink-readout { display: flex; justify-content: space-between; padding: .33rem .47rem .10rem; color: #f0d7ab; font-size: .76rem; font-variant-numeric: tabular-nums; }
+.ink-readout {
+  display: flex; align-items: center; justify-content: space-between; gap: .35rem;
+  margin-top: .28rem; padding: .44rem .28rem .18rem; border-top: 1px solid #d1ad7f38;
+  color: #f0d7ab; font-size: .78rem; font-variant-numeric: tabular-nums;
+}
+.ink-position { display: grid; gap: .12rem; }
+#ink-move-help { color: #c9c2d6; font-size: .72rem; }
+.ink-turns { display: flex; flex: none; align-items: center; gap: .26rem; }
+#ink-angle { min-width: 2.6em; text-align: center; }
+.ink-turns button {
+  width: 2.75rem; min-height: 2.75rem; padding: .12rem; font-size: 1.18rem; line-height: 1;
+}
+.ink-turns button:disabled { opacity: .42; }
 .ink-controls { display: grid; gap: .52rem; }
 .ink-controls h3 { margin: 0; color: #ead7b5; font: 1rem var(--display); }
 #panel-body .ink-controls > p { margin: 0; }
@@ -501,13 +513,6 @@ dialog:has(.ink-viewer) { width: min(57rem, calc(100% - 1.5rem)); background: li
 }
 .ink-plate canvas { display: block; width: 100%; height: auto; }
 .ink-plates .ink-plate[aria-pressed="true"] { border-color: #f1ca88; background: #543d50; box-shadow: inset 0 -3px #d5a86d4a; }
-.ink-adjustments { display: flex; align-items: center; justify-content: space-between; gap: .35rem; flex-wrap: wrap; }
-.ink-adjustments h3 { margin: .07rem 0 .32rem; }
-.ink-translation, .ink-turns { display: flex; gap: .27rem; }
-.ink-adjustments button {
-  width: 2.46rem; min-height: 2.46rem; padding: .12rem; font-size: 1.14rem; line-height: 1; touch-action: manipulation;
-}
-.ink-adjustments button:disabled { opacity: .42; }
 #ink-flip[aria-pressed="true"] { border-color: #efd299; }
 .ink-controls #ink-status:empty { display: none; }
 @media (max-width: 650px) {
