@@ -33,6 +33,13 @@ Pistas en orden de reproducción, con los archivos en `assets/audio/`.
 - Yuval · [footsteps socks wood](https://freesound.org/people/Yuval/sounds/210770/)
 - lreeve · [Creaky footsteps on wood floor](https://freesound.org/people/lreeve/sounds/874897/)
 
+## Muebles
+
+`assets/audio/cami_furniture.m4a` reúne las aperturas y los cierres de los muebles. Las tomas CC0 se recortaron, ecualizaron y ajustaron al ritmo de cada movimiento.
+
+- Puertas del aparador · j1987 · [cupboard_open_closing.wav](https://freesound.org/people/j1987/sounds/72619/)
+- Cajón del estudio · HECKFRICKER · [Drawer Opening + Closing 1](https://freesound.org/people/HECKFRICKER/sounds/803213/)
+
 ## Pingu
 
 - Modelo [«Chibi Kitten With Bell - Tripo 3D vs SupaVoxel»](https://sketchfab.com/3d-models/chibi-kitten-with-bell-tripo-3d-vs-supavoxel-e75473f853184396ab630f4819b8350e) de [Cato Berg](https://sketchfab.com/catoberg13), bajo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Se redujeron la malla y las texturas, se ajustó la escala y se recoloreó el pelaje para Pingu.
