@@ -50,3 +50,7 @@ Pistas en orden de reproducción, con los archivos en `assets/audio/`.
 - Posiciones y magnitudes del catálogo Hipparcos I/239 de la ESA, servidas por GAVO. [Catálogo Hipparcos](https://heasarc.gsfc.nasa.gov/W3Browse/star-catalog/hipparcos.html) · [Tabla de GAVO](https://reg.g-vo.org/__system__/dc_tables/show/tableinfo/hipparcos.main)
 - Trazos simplificados y adaptados de Stellarium Modern bajo CC BY-SA 4.0. [Datos de Stellarium](https://github.com/Stellarium/stellarium/blob/master/skycultures/modern/index.json) · [Licencia del catálogo de figuras](https://creativecommons.org/licenses/by-sa/4.0/)
 - Conversión de coordenadas al horizonte con la hora sidérea media. [Hora sidérea](https://aa.usno.navy.mil/faq/GAST) · [Altitud y acimut](https://aa.usno.navy.mil/faq/alt_az)
+
+## Acuarela del parque
+
+- Acuarela generada con ImageGen a partir de una fotografía aportada para el juego. [Ilustración](assets/cuadros/acuarela_del_parque.jpg)
