@@ -519,6 +519,7 @@ dialog:has(.transit-layout), dialog:has(#atlas) { width: min(51rem, calc(100% - 
 .transit-layout { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; align-items: start; }
 .transit-clues, .transit-table { display: grid; gap: .47rem; }
 #panel-body .transit-clues p { margin: 0; }
+#panel-body .transit-margin { color: #d1c3a9; font: italic 1rem/1.45 var(--display); }
 .observing-note { padding: .52rem .68rem; border: 1px solid #a2845c96; border-radius: .43rem; background: #29353a; }
 .observing-note strong, .transit-head { color: #f4d7a4; font-size: .86rem; }
 .transit-row, .transit-head { display: grid; grid-template-columns: 1.25rem 1.08fr 1fr; gap: .36rem; align-items: center; }
