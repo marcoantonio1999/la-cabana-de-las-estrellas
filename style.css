@@ -546,12 +546,16 @@ dialog:has(.plush-viewer) .panel-icon { display: none; }
   background: radial-gradient(ellipse at 50% 48%, #59525e, #312d3c 62%, #1f2530);
   box-shadow: 0 6px 18px #07101985 inset;
 }
+.vase-stage {
+  border-color: #8a8d6c;
+  background: radial-gradient(ellipse at 50% 48%, #49564a, #293a33 59%, #1b2629);
+}
 [data-object-stage] canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: none; }
 [data-object-stage] canvas:active { cursor: grabbing; }
 [data-object-stage] canvas:focus-visible { outline: 1px solid #ebc991; outline-offset: -4px; }
 .plush-controls { display: flex; align-items: center; justify-content: space-between; gap: .45rem .7rem; flex-wrap: wrap; min-height: 2.4rem; }
 .plush-read { touch-action: manipulation; }
-#panel-body #plush-help { margin: 0; font-size: .87rem; color: #ded1cf; }
+#panel-body .plush-controls p { margin: 0; font-size: .87rem; color: #ded1cf; }
 #panel-body .plush-letter p + p { font-size: .98rem; }
 dialog:has(.observation-stage) .panel-icon { display: none; }
 .observation-stage {
