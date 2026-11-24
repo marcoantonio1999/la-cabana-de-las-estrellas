@@ -456,6 +456,18 @@ dialog:has(.folded-note-view) .close:hover { background: #513b29; }
   color: #f1d8ac; font-size: .84rem;
 }
 .note-actions .note-turn:hover { background: #513b29; }
+.reason-slip-view .note-stage { height: min(58dvh, 31rem, 61vw); min-height: 10.25rem; }
+.reason-slip-actions { flex-wrap: wrap; gap: .45rem; }
+.reason-slip-actions button {
+  border-radius: 2rem; background: #2b2118ed; border-color: #b99763; color: #f1d8ac;
+}
+.reason-slip-actions button:enabled:hover { background: #513b29; }
+.reason-slip-actions button:disabled { opacity: .45; cursor: default; }
+.reason-slip-actions .note-turn[hidden] { display: none; }
+#panel-body .reason-slip-fallback {
+  margin: 2.6rem auto 1rem; padding: 2rem; max-width: 36rem; border-radius: .35rem;
+  background: #f0dcba; color: #473124; text-align: center; font: italic 1.2rem/1.5 Georgia, serif;
+}
 dialog:has(.ink-viewer) { width: min(57rem, calc(100% - 1.5rem)); background: linear-gradient(140deg, #26323a, #142431 58%); }
 .ink-instrument { display: grid; gap: .95rem; }
 .ink-instrument button { touch-action: manipulation; }
@@ -559,6 +571,17 @@ dialog:has(.plush-viewer) .panel-icon { display: none; }
 .vase-stage {
   border-color: #8a8d6c;
   background: radial-gradient(ellipse at 50% 48%, #49564a, #293a33 59%, #1b2629);
+}
+.reasons-stage {
+  height: clamp(12rem, 49dvh, 25rem);
+  border-color: #a78a63;
+  background: radial-gradient(ellipse at 50% 45%, #514b41, #363a36 60%, #242a2b);
+}
+dialog:has(.reasons-jar) h2 { padding-inline-end: 2.1rem; }
+.reasons-jar-actions { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+#panel-body #reasons-help { margin: 0; font-size: .85rem; color: #dcccb3; text-align: center; }
+#panel-body .reasons-remaining {
+  flex: 1 0 8rem; margin: 0; color: #ead4aa; font-size: .88rem; font-variant-numeric: tabular-nums;
 }
 dialog:has(.display-case-viewer) { width: min(39rem, calc(100% - 1.5rem)); }
 dialog:has(.display-case-viewer) h2 { padding-inline-end: 2.1rem; }
