@@ -663,12 +663,13 @@ dialog:has(.telescope-layout) { width: min(52rem, calc(100% - 1.5rem)); }
   aspect-ratio: 1;
   overflow: hidden;
   isolation: isolate;
-  border: 3px solid #98764c;
+  border: 1px solid #dec094;
   border-radius: 50%;
   background: #0b121d;
-  box-shadow: 0 0 0 2px #2e271e, 0 0 0 3px #b79861, 0 8px 24px #070e15b0;
+  box-shadow: 0 0 0 2px #3c2b21, 0 0 0 4px #9e764b, 0 0 0 5px #654631,
+    0 0 0 6px #b58b59, 0 10px 24px #070e15b0;
 }
-.eyepiece:focus-within { outline: 1px solid #e4c287; outline-offset: 5px; }
+.eyepiece:focus-within { outline: 1px solid #e4c287; outline-offset: 8px; }
 .telescope-lens {
   display: block;
   width: 100%;
@@ -681,8 +682,8 @@ dialog:has(.telescope-layout) { width: min(52rem, calc(100% - 1.5rem)); }
 .lens-shading, .lens-crosshair { position: absolute; pointer-events: none; }
 .lens-shading {
   inset: 0;
-  background: radial-gradient(circle, transparent 52%, #060a1260 82%, #040810ed 100%);
-  box-shadow: inset 0 0 9px 4px #05070bd1;
+  background: radial-gradient(circle, transparent 56%, #101d2a3b 82%, #040810ed 100%);
+  box-shadow: inset 0 0 0 2px #6c6f764f, inset 0 0 12px 4px #05070bd1;
 }
 .lens-crosshair {
   inset: 44%;
