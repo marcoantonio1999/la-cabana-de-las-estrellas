@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101e2a">
+  <meta name="description" content="Explora una cabaña 3D con Cami, una osita bebé, y resuelve el misterio de las constelaciones.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+  <title>La cabaña de las estrellas</title>
+  <script defer src="./game.js"></script>
+</head>
+<body>
+  <main id="cover" aria-labelledby="cover-title" hidden>
+    <canvas class="cover-art" id="cover-world" aria-hidden="true"></canvas>
+    <div class="cover-content">
+      <h1 id="cover-title">La cabaña de <span>las estrellas</span></h1>
+      <p>Ayuda a Cami a descifrar el cielo y encontrar el camino a casa.</p>
+      <button id="start-story" class="start-story" type="button"><span aria-hidden="true">✦</span> Empezar historia</button>
+    </div>
+  </main>
+  <main id="storybook" aria-labelledby="storybook-title" tabindex="-1" hidden>
+    <div class="storybook-shell">
+      <header class="storybook-header">
+        <button id="book-back" type="button" class="book-button book-back">Volver a la portada</button>
+        <h1 id="storybook-title">El cuaderno de Cami</h1>
+      </header>
+      <div id="book-spread" class="book-spread">
+        <figure id="story-art" class="story-leaf story-art">
+          <img id="story-illustration" width="1024" height="1024" alt="">
+        </figure>
+        <div id="story-copy" class="story-leaf story-copy" aria-live="polite" aria-atomic="true">
+          <p id="story-page-text"></p>
+        </div>
+        <div id="turn-leaf" class="turn-leaf" aria-hidden="true" hidden></div>
+      </div>
+      <nav class="storybook-nav" aria-label="Páginas de la historia">
+        <button id="previous-page" type="button" class="book-button" disabled>Anterior</button>
+        <p id="story-pagination" aria-live="polite"></p>
+        <button id="next-page" type="button" class="book-button book-next">Siguiente</button>
+      </nav>
+    </div>
+  </main>
+  <main id="closing" aria-labelledby="closing-title" tabindex="-1" hidden>
+    <div class="closing-shell">
+      <header class="closing-credit">
+        <h1 id="closing-title">Créditos</h1>
+        <p>Un juego creado por <strong>Marco Antonio Avila</strong></p>
+      </header>
+      <article class="closing-poem" aria-labelledby="poem-title">
+        <h2 id="poem-title">Un farol para ti</h2>
+        <p>Puse estrellas en esta cabaña<br>
+          y escondí una llave en el baúl.<br>
+          Mientras trazaba el camino a la puerta,<br>
+          me imaginaba tu risa al abrirla.</p>
+        <p>Que nos sobren noches para escucharnos,<br>
+          para dejar que se enfríe el café<br>
+          y seguir hablando con el cuaderno abierto<br>
+          hasta que amanezca.</p>
+        <p>Si alguna noche tardas en volver,<br>
+          te dejaré un farol junto al cristal.<br>
+          Tú verás la luz desde el último pino.<br>
+          Yo te veré llegar desde la ventana.</p>
+      </article>
+      <button id="replay" class="book-button" type="button">Jugar de nuevo</button>
+    </div>
+  </main>
+  <audio id="soundtrack" preload="auto"></audio>
+  <main id="game" aria-label="La cabaña de las estrellas" tabindex="-1" hidden>
+    <canvas id="world" aria-label="Cabaña 3D. Arrastra para mirar y toca los objetos para examinarlos. Puedes moverte con el teclado o tocando el suelo."></canvas>
+    <header class="hud">
+      <span id="location" aria-live="polite">Planta baja</span>
+      <section class="mission" aria-label="Objetivo de la partida">
+        <div class="mission-icon" aria-hidden="true">✧</div>
+        <div><div class="overline">Objetivo</div><p id="objective" aria-live="polite">Encuentra la salida</p></div>
+      </section>
+    </header>
+    <p id="loading" class="loading" role="status">Cargando la cabaña…</p>
+    <div class="bottom">
+      <div id="prompt" class="prompt" aria-live="polite">Cami se despertó solita. Puedes examinar el baúl o el mapa sobre la chimenea.</div>
+      <section id="inventory" class="inventory" aria-label="Inventario" hidden>
+        <ul id="inventory-items" aria-live="polite"></ul>
+      </section>
+      <div class="guide" aria-label="Controles">
+        <span class="keyboard"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><span>Moverse</span></span>
+        <span class="keyboard"><kbd>E</kbd><span>Examinar de cerca</span></span>
+        <span class="pointer"><span class="pointer-icon" aria-hidden="true">◎</span><span class="desktop-pointer">Arrastra para mirar. Haz clic en los objetos.</span><span class="touch-pointer">Arrastra para mirar. Toca el suelo o un objeto.</span></span>
+      </div>
+    </div>
+    <button id="reset-view" class="reset-view" type="button" aria-label="Centrar cámara" title="Centrar cámara">⌖</button>
+    <p id="error" class="error" role="alert" hidden></p>
+    <dialog id="panel" aria-labelledby="panel-title">
+      <div class="panel-inner">
+        <button id="close-panel" class="close" type="button" aria-label="Cerrar">×</button>
+        <div id="panel-icon" class="panel-icon" aria-hidden="true">✧</div>
+        <h2 id="panel-title"></h2>
+        <div id="panel-body"></div>
+      </div>
+    </dialog>
+  </main>
+</body>
+</html>
