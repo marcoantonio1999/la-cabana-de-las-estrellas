@@ -58,6 +58,7 @@ button:focus-visible { outline: 2px solid #fff1bc; outline-offset: 4px; }
   line-height: 1.55;
   text-shadow: 0 2px 10px #04090bdd;
 }
+.cover-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; }
 .start-story {
   display: inline-flex;
   align-items: center;
@@ -84,6 +85,7 @@ button:focus-visible { outline: 2px solid #fff1bc; outline-offset: 4px; }
   .cover-art { height: 70%; }
   #cover::after { background: linear-gradient(180deg, transparent 42%, #09141728 49%, #091417cf 63%, #091417 70%); }
   .cover-content { margin-inline: auto; }
+  .cover-actions { justify-content: center; }
   #cover-title { font-size: clamp(2.8rem, 11.3vw, 4.7rem); }
   .cover-content p { margin: .85rem auto 1.12rem; }
 }
