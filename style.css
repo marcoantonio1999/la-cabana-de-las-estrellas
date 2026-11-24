@@ -826,8 +826,6 @@ dialog:has(.chest-controls) { width: min(51rem, calc(100% - 1.5rem)); }
 .chest-control .secondary { padding: .2rem; min-height: 2rem; font-size: 1rem; line-height: 1; }
 #panel-body #chest-status { margin: .55rem 0 0; }
 #panel-body #chest-status:empty { display: none; }
-.chest-notes { margin-top: .7rem; }
-#panel-body .chest-notes p { margin: .45rem 0 0; }
 @media (max-width: 560px) {
   .chest-model { aspect-ratio: 2.5 / 1; }
   .chest-controls { grid-template-columns: repeat(3, minmax(0, 1fr)); }
