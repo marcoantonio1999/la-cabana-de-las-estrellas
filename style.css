@@ -689,6 +689,8 @@ dialog:has(.library-layout) { width: min(68rem, calc(100% - 1.5rem)); }
 #panel-body #library-status { margin-top: .54rem; }
 dialog:has(.telescope-layout) { width: min(52rem, calc(100% - 1.5rem)); }
 .telescope-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); align-items: center; gap: 1.05rem; }
+.telescope-view { width: 100%; padding-top: .55rem; }
+#panel-body #scope-help { margin: .85rem auto 0; color: #ddd0b8; font-size: .82rem; text-align: center; }
 .eyepiece {
   position: relative;
   width: 100%;
@@ -739,24 +741,18 @@ dialog:has(.telescope-layout) { width: min(52rem, calc(100% - 1.5rem)); }
 .scope-readings div { display: grid; gap: .23rem; padding: .38rem .56rem; border: 1px solid #b5976e55; border-radius: .39rem; background: #10212c; }
 .scope-readings span { color: #dbc9ae; font-size: .74rem; }
 .scope-readings output { color: #ffe2a8; font: 1.34rem/1 var(--display); font-variant-numeric: tabular-nums; }
-.telescope-buttons { display: grid; gap: .37rem; }
-.telescope-buttons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.telescope-buttons button { padding: .43rem .28rem; font-size: .85rem; }
-.scope-zoom { justify-self: start; padding: .37rem .65rem; font-size: .81rem; }
-.scope-zoom[aria-pressed="true"] { border-color: #dbb678; color: #ffe2a8; }
 .scope-records { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .37rem; }
 .scope-records button { display: grid; justify-items: start; gap: .18rem; padding: .48rem .58rem; text-align: left; font-size: .84rem; }
 .scope-records button.recorded { border-color: #c5a36b; background: #3a3429; }
 .scope-record-position { font-weight: 400; font-size: .75rem; color: #e7cfa5; }
 #panel-body .scope-status, #panel-body .lock-status { margin: 0; min-height: 2.3em; color: #ecd9b4; font-size: .91rem; }
+#panel-body .scope-status:empty { display: none; }
 @media (max-width: 530px) {
   .armillary-layout { grid-template-columns: 1fr; }
   .armillary-model { width: min(100%, 32dvh); justify-self: center; }
   .telescope-layout { grid-template-columns: 1fr; justify-items: center; gap: .68rem; }
-  .eyepiece { width: min(100%, 29dvh); }
+  .eyepiece { width: min(100%, 35dvh); margin-inline: auto; }
   .telescope-controls { width: min(100%, 22rem); }
-  .telescope-buttons { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .telescope-buttons button { font-size: .77rem; }
 }
 @media (max-width: 670px) {
   dialog:has(.library-layout) .verse { padding: .58rem .74rem; font-size: 1.01rem; line-height: 1.54; }
