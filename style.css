@@ -623,19 +623,6 @@ dialog:has(.library-layout) { width: min(68rem, calc(100% - 1.5rem)); }
 .library-book:hover { border-color: #e4bd84; }
 .library-book[aria-pressed="true"] { border-color: #ffe2a8; background: #574835; color: #fff0cc; }
 #panel-body #library-status { margin-top: .54rem; }
-.library-seal {
-  display: grid;
-  place-items: center;
-  width: 4rem;
-  aspect-ratio: 1;
-  margin: .25rem 0 .8rem;
-  border: 3px double #efc988;
-  border-radius: 50%;
-  background: radial-gradient(ellipse at 35% 25%, #95613c, #4d2c23);
-  box-shadow: 0 4px 10px #080a11a3;
-  color: #ffe3ac;
-  font-size: 1.9rem;
-}
 dialog:has(.telescope-layout) { width: min(52rem, calc(100% - 1.5rem)); }
 .telescope-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); align-items: center; gap: 1.05rem; }
 .eyepiece {
@@ -687,7 +674,7 @@ dialog:has(.telescope-layout) { width: min(52rem, calc(100% - 1.5rem)); }
 .scope-readings div { display: grid; gap: .23rem; padding: .38rem .56rem; border: 1px solid #b5976e55; border-radius: .39rem; background: #10212c; }
 .scope-readings span { color: #dbc9ae; font-size: .74rem; }
 .scope-readings output { color: #ffe2a8; font: 1.34rem/1 var(--display); font-variant-numeric: tabular-nums; }
-.telescope-buttons, .exit-options { display: grid; gap: .37rem; }
+.telescope-buttons { display: grid; gap: .37rem; }
 .telescope-buttons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .telescope-buttons button { padding: .43rem .28rem; font-size: .85rem; }
 .scope-zoom { justify-self: start; padding: .37rem .65rem; font-size: .81rem; }
@@ -697,28 +684,6 @@ dialog:has(.telescope-layout) { width: min(52rem, calc(100% - 1.5rem)); }
 .scope-records button.recorded { border-color: #c5a36b; background: #3a3429; }
 .scope-record-position { font-weight: 400; font-size: .75rem; color: #e7cfa5; }
 #panel-body .scope-status, #panel-body .lock-status { margin: 0; min-height: 2.3em; color: #ecd9b4; font-size: .91rem; }
-.exit-lock { display: grid; gap: .63rem; }
-.exit-lock button { justify-self: start; }
-.wheel-order { display: flex; flex-wrap: wrap; align-items: center; gap: .32rem .56rem; font-size: .89rem; }
-.wheel-order span:nth-child(even) { color: #efca84; }
-.exit-dial { min-width: 0; margin: 0; padding: .43rem; border: 1px solid #a887596b; border-radius: .48rem; }
-.exit-dial legend { padding: 0 .34rem; color: #ffe4ae; font-size: .93rem; }
-.exit-options { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.exit-options label { position: relative; cursor: pointer; }
-.exit-options input { position: absolute; inline-size: 1px; block-size: 1px; clip-path: inset(50%); }
-.exit-options label > span {
-  display: grid;
-  justify-items: center;
-  gap: .12rem;
-  padding: .28rem .12rem .38rem;
-  border: 1px solid #9bb9cb3d;
-  border-radius: .35rem;
-  background: #1d3442;
-  font-size: .77rem;
-}
-.exit-symbol { color: #ecd196; font-size: 1.32rem; line-height: 1.15; }
-.exit-options input:checked + span { border-color: #f1c47e; background: #534636; color: #fff1c8; }
-.exit-options input:focus-visible + span { outline: 2px solid #ffd994; outline-offset: 2px; }
 @media (max-width: 530px) {
   .armillary-layout { grid-template-columns: 1fr; }
   .armillary-model { width: min(100%, 32dvh); justify-self: center; }
