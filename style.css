@@ -354,7 +354,17 @@ dialog:has(.cabin-plan) { width: min(55rem, calc(100% - 1.5rem)); }
 kbd { display: inline-grid; min-width: 1.22rem; height: 1.29rem; place-items: center; border-radius: .24rem; background: #cad8eb19; color: var(--cream); font: 650 .75rem var(--body); }
 .pointer-icon { color: var(--gold); font-size: 1rem; margin-right: .2rem; }
 .touch-pointer { display: none; }
-.loading { position: absolute; inset: 48% 0 auto; text-align: center; margin: 0; font: 1.25rem var(--display); }
+.loading {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  background: #101b1e;
+  text-align: center;
+  font: 1.25rem var(--display);
+}
 .reset-view {
   position: absolute; z-index: 3; right: 1rem; bottom: max(1.3rem, env(safe-area-inset-bottom));
   display: grid; place-items: center; width: 2.5rem; height: 2.5rem; padding: 0;
